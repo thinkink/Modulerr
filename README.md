@@ -1,14 +1,18 @@
 # Modulerr
 ## A cockpit CMS addon module generator
 
+
+### clean install of cockpit-next
+
+![clean install Cockpit](https://raw.githubusercontent.com/thinkink/Modulerr/master/docs/Modulerr1.gif)
+
 ### Routes
 
 place this folder in your host:
 
-![clean install Cockpit](https://raw.githubusercontent.com/thinkink/Modulerr/master/docs/Modulerr1.gif)
-
-  . localhost/demo/Moduler-master
-  . localhost/demo/Cockpit-next
+ - localhost/demo/Modulerr-master
+ 
+ - localhost/demo/Cockpit-next
   
 ### Include your Cockpit CMS
 
