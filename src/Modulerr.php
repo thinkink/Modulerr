@@ -45,11 +45,10 @@ function random_icon($dir = __DIR__.'/source/icons'){
 
 function __construct($config , $app = null){
 	
-	d($config);
+	
 	$this->output = $config['config']['output'];
 	unset($config["config"]);
-	d($this);
-	//d($config);
+	
 	$this->tree = $config;
 	$this->app = $app;
 	$this->name = array_keys($config)[0];
@@ -79,25 +78,18 @@ function make_dir_tree($structure, $path=__DIR__){
 				$new_path = "{$path}/{$folder}";
 				if ( ! is_dir($new_path)) mkdir($new_path);
 				if(isset($sub_folder["files"])){
-				//d($sub_folder);
-							 echo "<p>folder with files detected  - folder: " . $folder ."</p>";
-							  
-							 
+				
 							
-							 foreach($sub_folder["files"] as $k=>$file){
+					foreach($sub_folder["files"] as $k=>$file){
 							 
-							   
-							 echo "<p> K: [" . $k. "] " .$new_path." files detected " .$file['name'] . "</p>";
-							 $base =     __DIR__ . "/" . $this->folderTemplate ."/"  . $file['name'] . ".tpl" ; 
-							 $subBase =  __DIR__ . "/" . $this->folderTemplate ."/".$folder."/" . $file['name'] . ".tpl";  
+						$base =     __DIR__ . "/" . $this->folderTemplate ."/"  . $file['name'] . ".tpl" ; 
+						$subBase =  __DIR__ . "/" . $this->folderTemplate ."/".$folder."/" . $file['name'] . ".tpl";  
 							
 
 							if(file_exists( $subBase )) $fileToGenerate = $subBase;
 							elseif(file_exists( $base )) $fileToGenerate = $base;
 						 	else $fileToGenerate = null;
 						
-						//$fileToGenerate = file_exists( $subBase )?$subBase:file_exists( $base )?$base:null;
-							 
 							 if(isset($fileToGenerate)){
 								 
 								$data = $this;
