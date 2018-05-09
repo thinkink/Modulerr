@@ -19,14 +19,14 @@ if(!isset($_GET['module_name']) || !isset($_GET['tpl'])){
 	exit();
 }
 
-$clientName = $_GET['module_name'];
+$moduleName = $_GET['module_name'];
 $tpl = $_GET['tpl'];
 
 include "Modulerr.php";
 include "../subdomain/admin/bootstrap.php";
 $app = cockpit();
  
-$tplString = $app->view(__DIR__ . "/source/models/".$tpl.".tpl.json", compact("clientName") );
+$tplString = $app->view(__DIR__ . "/source/models/".$tpl.".tpl.json", compact("moduleName") );
 
 $tplObject = json_decode($tplString , true);
 d( $tplObject );
