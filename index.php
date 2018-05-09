@@ -29,9 +29,9 @@ $app = cockpit();
 $tplString = $app->view(__DIR__ . "/source/models/".$tpl.".tpl.json", compact("moduleName") );
 
 $tplObject = json_decode($tplString , true);
-d( $tplObject );
+// kint debug d( $tplObject );
 $tplObject["config"] = [ "output" => "generated" ];
-d( $tplObject );
+// kint debug d( $tplObject );
 echo "<pre>";
 print_r($tplObject );
 echo "</pre>";
@@ -43,4 +43,4 @@ $module = new Modulerr\Modulerr($tplObject,$app);
 <?php
 
 echo file_get_contents($module->moduleIcon);	
-d($module); 
+// kint debug d($module); 
