@@ -1,5 +1,5 @@
 {
-	"<?php echo $clientName; ?>" : {
+	"<?php echo $moduleName; ?>" : {
 		 
 		"files" : [
 		{"name" : "readme.md"}, 
