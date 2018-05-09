@@ -100,8 +100,7 @@ function make_dir_tree($structure, $path=__DIR__){
 								 $fileToCopy = $this->{$file['name']}();
 								 $newfile = $new_path . "/" . "icon". ".svg";
 								 copy($fileToCopy, $newfile);
-									//d( method_exists($this,$file['name']) );
-									//dd( $fileContents);
+									
 							 }
 							 else{
 							$contents = "// contensts here ";	 
