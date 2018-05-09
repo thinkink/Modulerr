@@ -3,10 +3,13 @@
         <li class="uk-active"><span>{{'@'}}lang('{{ $data->name  }}')</span></li>
     </ul>
 </div>
-<h1>Hola desde el index view of {{ $data->name  }}</h1>
+		<h2>{{ $data->name }}</h2>	
+		 
 <div riot-view>
 
     <div if="{ ready }">
+			<h2>{ {{ $data->names['lowercase']  }}.info	}</h2>
+			<h3>no se { App.Utils.count({{ $data->names['lowercase']  }}) }</h3>
 
         <div class="uk-margin uk-clearfix" if="{ App.Utils.count({{ $data->names['lowercase']  }}) }">
 
@@ -51,7 +54,7 @@
     <script type="view/script">
         var $this = this;
         this.ready  = true;
-        this.singletons = {{ json_encode($singletons) }};
+        this.{{ $data->names['lowercase']  }} = {{ '{{json_encode($'.  $data->names['lowercase'] . ')'}} }}  ;
         
     </script>
 
