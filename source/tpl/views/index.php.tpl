@@ -9,8 +9,13 @@
 
     <div if="{ ready }">
 			<h2>{ {{ $data->names['lowercase']  }}.info	}</h2>
-			<h3>Size of passed var { App.Utils.count({{ $data->names['lowercase']  }}) }</h3>
-
+			<h3>no se { App.Utils.count({{ $data->names['lowercase']  }}) }</h3>
+			
+			<!--
+			the code below is not implemented yet
+			is from Singleton
+			
+			-->
         <div class="uk-margin uk-clearfix" if="{ App.Utils.count({{ $data->names['lowercase']  }}) }">
 
             <div class="uk-form-icon uk-form uk-text-muted">
