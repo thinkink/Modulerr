@@ -1,0 +1,22 @@
+{
+	"<?php echo $clientName; ?>" : {
+		 
+		"files" : [
+		{"name" : "readme.md"}, 
+		{"name" : "random_icon"}, 
+		{"name" : "admin.php"} ,
+		{"name" : "bootstrap.php"} 
+		],
+		"views" : {
+			"files" : [
+				{"name" : "index.php"} 
+				]
+		},
+		"Controller" : {
+			"files" : [
+				{"name" : "Admin.php"}, 
+				{"name" : "RestApi.php"} 
+				]
+		}
+	}
+}
