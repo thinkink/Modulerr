@@ -23,7 +23,7 @@ $moduleName = $_GET['module_name'];
 $tpl = $_GET['tpl'];
 
 include "Modulerr.php";
-include "../subdomain/admin/bootstrap.php";
+include "../pathto/cockpit/bootstrap.php";
 $app = cockpit();
  
 $tplString = $app->view(__DIR__ . "/source/models/".$tpl.".tpl.json", compact("moduleName") );
