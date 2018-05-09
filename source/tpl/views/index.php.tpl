@@ -9,7 +9,7 @@
 
     <div if="{ ready }">
 			<h2>{ {{ $data->names['lowercase']  }}.info	}</h2>
-			<h3>no se { App.Utils.count({{ $data->names['lowercase']  }}) }</h3>
+			<h3>Vars in object,  passed to Riot   { App.Utils.count({{ $data->names['lowercase']  }}) }</h3>
 			
 			<!--
 			the code below is not implemented yet
